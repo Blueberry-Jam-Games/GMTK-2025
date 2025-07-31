@@ -1,5 +1,4 @@
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -17,19 +16,15 @@ public class TorusTransform : MonoBehaviour
     private float pMinorRotation;
     private float pRadius;
     private Vector3 pPosition;
+    private float pRotation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        domain = GameObject.FindGameObjectWithTag("Torus").GetComponent<TorusDomain>();
+
     }
 
 #if UNITY_EDITOR
-    void OnValidate()
-    {
-        
-    }
-
 
     void EditorCode()
     {
@@ -46,6 +41,7 @@ public class TorusTransform : MonoBehaviour
             pMinorRotation = MinorRotation;
             pRadius = Radius;
             pPosition = transform.position;
+            pRotation = Rotation;
             NormalRotation();
         }
         else if (pMajorRotation != MajorRotation || pMinorRotation != MinorRotation || pRadius != Radius)
@@ -55,7 +51,13 @@ public class TorusTransform : MonoBehaviour
             pMinorRotation = MinorRotation;
             pRadius = Radius;
             pPosition = transform.position;
+            pRotation = Rotation;
             NormalRotation();
+        }
+        else if (pRotation != Rotation)
+        {
+            NormalRotation();
+            pRotation = Rotation;
         }
     }
 #endif
@@ -80,5 +82,6 @@ public class TorusTransform : MonoBehaviour
     void NormalRotation()
     {
         transform.LookAt(domain.GetLocalCenter(MajorRotation), Vector3.down);
+        transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, Rotation);
     }
 }

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class MovementTest : MonoBehaviour
 {
-    public float direction = 0;
     public TorusTransform transformation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +14,7 @@ public class MovementTest : MonoBehaviour
     {
         if (transformation != null)
         {
-            transformation.MoveDirection(direction, 0.05f);
+            transformation.MoveDirection(transformation.Rotation, 0.05f);
         }
     }
 }
