@@ -1,4 +1,7 @@
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
+
 using UnityEngine;
 
 [ExecuteAlways]
@@ -32,7 +35,7 @@ public class TorusWarp : MonoBehaviour
     void Update()
     {
 #if UNITY_EDITOR
-            UpdateVerticies();
+        UpdateVerticies();
 #endif
     }
 
@@ -60,6 +63,8 @@ public class TorusWarp : MonoBehaviour
         }
 
         altered.vertices = finalVertices;
+#if UNITY_EDITOR
         EditorUtility.SetDirty(this);
+#endif
     }
 }
