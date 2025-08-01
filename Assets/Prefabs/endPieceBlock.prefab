@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: e7bf48d05a0194943a58a500f5c9a619, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e7bf48d05a0194943a58a500f5c9a619, type: 3}
       propertyPath: m_Name
       value: endPieceBlock
@@ -81,9 +85,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   domain: {fileID: 0}
-  MajorRotation: 0
-  MinorRotation: 0
-  Radius: 0
+  MajorRotation: -3.022987
+  MinorRotation: -0.4675412
+  Radius: 0.4
   Rotation: 0
 --- !u!114 &3505521879056359285
 MonoBehaviour:
@@ -98,6 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torus: {fileID: 792258172212436162}
-  savedRadius: 0
+  savedRadius: 0.4
   savedRotation: 0
   mesh: {fileID: 4244192110561106351, guid: e7bf48d05a0194943a58a500f5c9a619, type: 3}
