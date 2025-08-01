@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations;
 
-public class SnakeHeadTest : MonoBehaviour
+public class SnakeHead : MonoBehaviour
 {
     public TorusTransform transformation;
 
@@ -81,6 +81,15 @@ public class SnakeHeadTest : MonoBehaviour
         if (queueIndex > 0 && !waitForValue)
         {
             positions.RemoveRange(0, queueIndex);
+            positionsXYZ.RemoveRange(0, queueIndex);
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        foreach (Vector3 c in positionsXYZ)
+        {
+            Gizmos.DrawSphere(c, 0.01f);
         }
     }
 

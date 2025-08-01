@@ -1,3 +1,4 @@
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -82,9 +83,24 @@ public class TorusTransform : MonoBehaviour
     public void MoveDirection(float direction, float distance)
     {
         direction *= Mathf.Deg2Rad;
-        MajorRotation += (distance / ((2 * Mathf.PI) * (domain.majorRadius + domain.minorRadius * Mathf.Sin(MinorRotation)))) * Mathf.Cos(direction);
-        MinorRotation += (distance / ((2 * Mathf.PI) * domain.minorRadius) * Mathf.Sin(direction));
-        transform.position = domain.ConvertToXYZ(MajorRotation, MinorRotation, Radius);
+        float newMajorRotation = (distance / ((2 * Mathf.PI) * (domain.majorRadius + domain.minorRadius * Mathf.Sin(MinorRotation)))) * Mathf.Cos(direction) + MajorRotation;
+        float newMinorRotation = (distance / ((2 * Mathf.PI) * domain.minorRadius) * Mathf.Sin(direction)) + MinorRotation;
+        Vector3 newPosition = domain.ConvertToXYZ(newMajorRotation, newMinorRotation, Radius);
+        Collider[] collide = Physics.OverlapSphere(newPosition, 0.1f);
+
+        if (collide.Length == 0)
+        {
+            transform.position = newPosition;
+            MajorRotation = newMajorRotation;
+            MinorRotation = newMinorRotation;
+        }
+        else
+        {
+            foreach (Collider c in collide)
+            {
+                Debug.Log(c.name);
+            }
+        }
         NormalRotation();
     }
 
