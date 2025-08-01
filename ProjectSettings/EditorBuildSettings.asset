@@ -9,5 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Test Scenes/TorusSpace.unity
     guid: 8d8292152e353a647adfa9a20a717d6c
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.input.settings: {fileID: 11400000, guid: 75cb83a1f9d86994eabb15d47ac36c85, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 31ff44bb0d1dd8d4281da539cdfd7a10, type: 3}
   m_UseUCBPForAssetBundles: 0
