@@ -20,35 +20,46 @@ public class SnakeHead : MonoBehaviour
 
     public List<TorusTransform> body = new List<TorusTransform>();
 
+    private InputAction Forward;
+    private InputAction Turn;
+
     void Start()
     {
         body.Clear();
         body.AddRange(transform.parent.GetComponentsInChildren<TorusTransform>());
         body.RemoveAt(0);
+        Forward = InputSystem.actions.FindAction("MoveForward");
+        Turn = InputSystem.actions.FindAction("Turn");
     }
 
     void FixedUpdate()
     {
         if (transformation != null)
         {
+            float forwardValue = Forward.ReadValue<float>();
+            if (forwardValue != 0)
+            {
+                float turnValue = Turn.ReadValue<float>();
+                rotation += (turnValue * 5f) * forwardValue;
+                transformation.MoveDirection(rotation, forwardValue / 15f);
+            }
             rotation %= 360;
             transformation.Rotation = rotation;
-            transformation.MoveDirection(rotation, 0.05f);
         }
 
-        if (Mathf.Abs((targetRotation - rotation) % 360) <= 5)
-        {
-            targetRotation = (float)Random.Range(0, 360);
-        }
+        // if (Mathf.Abs((targetRotation - rotation) % 360) <= 5)
+        // {
+        //     targetRotation = (float)Random.Range(0, 360);
+        // }
 
-        if ((targetRotation - rotation) % 360 > 180)
-        {
-            rotation -= 2;
-        }
-        else if ((targetRotation - rotation) % 360 < 180)
-        {
-            rotation += 2;
-        }
+        // if ((targetRotation - rotation) % 360 > 180)
+        // {
+        //     rotation -= 2;
+        // }
+        // else if ((targetRotation - rotation) % 360 < 180)
+        // {
+        //     rotation += 2;
+        // }
 
         updatePath();
     }
