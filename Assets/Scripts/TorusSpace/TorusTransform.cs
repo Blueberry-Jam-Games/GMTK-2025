@@ -7,11 +7,15 @@ using UnityEngine.Rendering;
 [ExecuteAlways]
 public class TorusTransform : MonoBehaviour
 {
+    [SerializeField]
     public TorusDomain domain;
+    [SerializeField]
     public float MajorRotation;
+    [SerializeField]
     public float MinorRotation;
+    [SerializeField]
     public float Radius;
-
+    [SerializeField]
     public float Rotation;
 
     private float pMajorRotation;
@@ -63,6 +67,8 @@ public class TorusTransform : MonoBehaviour
                 NormalRotation();
                 pRotation = Rotation;
             }
+
+            EditorUtility.SetDirty(this);
         }
     }
 #endif
