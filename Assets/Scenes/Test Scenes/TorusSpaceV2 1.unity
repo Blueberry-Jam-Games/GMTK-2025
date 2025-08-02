@@ -1640,7 +1640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   domain: {fileID: 1369526262}
   MajorRotation: 0.015089535
-  MinorRotation: -3.126871
+  MinorRotation: -3.1268752
   Radius: 0.4
   Rotation: 0
 --- !u!65 &1630184398
@@ -1725,8 +1725,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630184396}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5074525, y: 0.49254745, z: -0.49985248, w: 0.5000365}
-  m_LocalPosition: {x: 0.9939984, y: -0.39995667, z: 0.015000112}
+  m_LocalRotation: {x: 0.50745153, y: 0.4925485, z: -0.49985152, w: 0.5000375}
+  m_LocalPosition: {x: 0.994, y: -0.39995667, z: 0.015000137}
   m_LocalScale: {x: 0.1, y: 0.8, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []

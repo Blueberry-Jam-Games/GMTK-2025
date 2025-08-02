@@ -10,6 +10,9 @@ TagManager:
   - Key
   - Door
   - Button
+  - Head
+  - Body
+  - Tail
   layers:
   - Default
   - TransparentFX

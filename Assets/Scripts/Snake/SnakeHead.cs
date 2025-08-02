@@ -115,7 +115,7 @@ public class SnakeHead : MonoBehaviour
         Collider[] collide = Physics.OverlapSphere(transform.position + transform.rotation * new Vector3(-0.2f, 0f, 0.06f), 0.1f);
         foreach (var item in collide)
         {
-            Debug.Log(item.gameObject.tag + " from head");
+            //Debug.Log(item.gameObject.tag + " from head");
             if (item.gameObject.tag == "Apple")
             {
                 body.Insert(1, Instantiate(bodyPrefab.GetComponent<TorusTransform>()));
@@ -125,7 +125,7 @@ public class SnakeHead : MonoBehaviour
             } else if (item.gameObject.tag == "Door") {
                 levelManager.OpenDoor(item.gameObject.name);
             } else if (item.gameObject.tag == "Button") {
-                levelManager.StartPressButton(item.gameObject.name);
+                //levelManager.StartPressButton(item.gameObject.name);
             } else if (item.gameObject.tag == "Portal") {
 
             }
