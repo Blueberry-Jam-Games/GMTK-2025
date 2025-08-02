@@ -110,3 +110,4 @@ MonoBehaviour:
   distanceBetweenSegments: 0.11
   positions: []
   body: []
+  bodyPrefab: {fileID: 983149647354665387, guid: 7d60475cb1db87d4e80ed1464fcb0067, type: 3}
