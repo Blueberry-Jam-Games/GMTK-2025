@@ -98,6 +98,11 @@ public class TorusTransform : MonoBehaviour
 
     }
 
+    public void LateUpdate()
+    {
+        moved = false;
+    }
+
     public void MoveDirection(float direction, float distance)
     {
         direction *= Mathf.Deg2Rad;
@@ -112,6 +117,7 @@ public class TorusTransform : MonoBehaviour
             transform.position = newPosition;
             MajorRotation = newMajorRotation;
             MinorRotation = newMinorRotation;
+            moved = true;
         }
         else
         {
@@ -133,10 +139,11 @@ public class TorusTransform : MonoBehaviour
         if (collide.Length == 0)
         {
             Rotation += (inRotation * 5f) * rotationModifier;
+            moved = true;
         }
         else
         {
-            
+
         }
     }
 

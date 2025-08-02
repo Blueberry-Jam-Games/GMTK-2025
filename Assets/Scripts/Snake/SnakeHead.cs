@@ -64,8 +64,11 @@ public class SnakeHead : MonoBehaviour
 
     private void updatePath()
     {
-        positions.Add(transformation.GetPosition());
-        positionsXYZ.Add(transformation.domain.ConvertToXYZ(transformation.GetPosition()));
+        if (transformation.hasMoved())
+        {
+            positions.Add(transformation.GetPosition());
+            positionsXYZ.Add(transformation.domain.ConvertToXYZ(transformation.GetPosition()));   
+        }
         int queueIndex = positions.Count - 1;
         bool waitForValue = false;
 
