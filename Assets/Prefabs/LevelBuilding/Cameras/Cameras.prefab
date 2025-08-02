@@ -95,16 +95,22 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 0}
     value: {fileID: 7207113428374117926}
-  - key: {fileID: -3524563704748458864, guid: 41e89c0ae5965b24e89161935a2c9aee, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 7207113428374117926}
-  - key: {fileID: -8102041039447568995, guid: 41e89c0ae5965b24e89161935a2c9aee, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: -1921847707836245170, guid: 41e89c0ae5965b24e89161935a2c9aee, type: 2}
+  - key: {fileID: 0}
+    value: {fileID: 1790523630023559812}
+  - key: {fileID: 8424888559099242463, guid: 41e89c0ae5965b24e89161935a2c9aee, type: 2}
+    value: {fileID: 7207113428374117926}
+  - key: {fileID: 5611960461879304827, guid: 41e89c0ae5965b24e89161935a2c9aee, type: 2}
     value: {fileID: 1790523630023559812}
   m_ExposedReferences:
     m_References:
     - bcfef6762dcff1d47a16e73720f5d16c: {fileID: 7550693831190615321}
+    - 1531ca62fd1dc8146b53e5305a1fb4fe: {fileID: 7550693831190615321}
     - 9c47c3535736efc4dbe17e7866061fc2: {fileID: 264944372818567007}
+    - 8e3113ea9ac42794bb2be45d22277202: {fileID: 264944372818567007}
 --- !u!95 &4316746885667069203
 Animator:
   serializedVersion: 7
@@ -195,31 +201,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8958798123581008862, guid: 62ac23f8e34bfaf43851235158e2102f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -36.23
+      value: -16.405298
       objectReference: {fileID: 0}
     - target: {fileID: 8958798123581008862, guid: 62ac23f8e34bfaf43851235158e2102f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.25
+      value: 11.452357
       objectReference: {fileID: 0}
     - target: {fileID: 8958798123581008862, guid: 62ac23f8e34bfaf43851235158e2102f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.21
+      value: 12.594722
       objectReference: {fileID: 0}
     - target: {fileID: 8958798123581008862, guid: 62ac23f8e34bfaf43851235158e2102f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6272114
+      value: 0.5374597
       objectReference: {fileID: 0}
     - target: {fileID: 8958798123581008862, guid: 62ac23f8e34bfaf43851235158e2102f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.32650557
+      value: 0.20058182
       objectReference: {fileID: 0}
     - target: {fileID: 8958798123581008862, guid: 62ac23f8e34bfaf43851235158e2102f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6272114
+      value: 0.76738775
       objectReference: {fileID: 0}
     - target: {fileID: 8958798123581008862, guid: 62ac23f8e34bfaf43851235158e2102f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.32650557
+      value: -0.28639176
       objectReference: {fileID: 0}
     - target: {fileID: 8958798123581008862, guid: 62ac23f8e34bfaf43851235158e2102f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
