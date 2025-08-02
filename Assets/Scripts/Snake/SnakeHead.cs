@@ -11,7 +11,7 @@ public class SnakeHead : MonoBehaviour
     public TorusTransform transformation;
 
     public float rotation = 0;
-    private float targetRotation = 0;
+    //private float targetRotation = 0;
 
     public float distanceBetweenSegments = 0.1f;
 
@@ -26,7 +26,7 @@ public class SnakeHead : MonoBehaviour
     void Start()
     {
         body.Clear();
-        body.AddRange(transform.parent.GetComponentsInChildren<TorusTransform>());
+        body.AddRange(transform.parent.GetComponentsInChildren<TorusTransform>(true));
         body.RemoveAt(0);
         Forward = InputSystem.actions.FindAction("MoveForward");
         Turn = InputSystem.actions.FindAction("Turn");
@@ -40,11 +40,9 @@ public class SnakeHead : MonoBehaviour
             if (forwardValue != 0)
             {
                 float turnValue = Turn.ReadValue<float>();
-                rotation += (turnValue * 5f) * forwardValue;
-                transformation.MoveDirection(rotation, forwardValue / 15f);
+                transformation.Rotate(turnValue, forwardValue);
+                transformation.MoveDirection(transformation.Rotation, forwardValue / 15f);
             }
-            rotation %= 360;
-            transformation.Rotation = rotation;
         }
 
         // if (Mathf.Abs((targetRotation - rotation) % 360) <= 5)
@@ -78,6 +76,10 @@ public class SnakeHead : MonoBehaviour
             {
                 if (Vector3.Distance(positionsXYZ[i], positionsXYZ[queueIndex]) >= distanceBetweenSegments)
                 {
+                    if (!s.gameObject.activeSelf)
+                    {
+                        s.gameObject.SetActive(true);
+                    }
                     s.SetPosition(positions[i]);
                     queueIndex = i;
                     success = true;
