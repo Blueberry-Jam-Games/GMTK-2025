@@ -1690,6 +1690,10 @@ MonoBehaviour:
   distanceBetweenSegments: 0.1
   positions: []
   body: []
+  bodyPrefab: {fileID: 0}
+  levelManager: {fileID: 0}
+  turnRadiusNerf: 2
+  speedFactor: 15
 --- !u!114 &990521198
 MonoBehaviour:
   m_ObjectHideFlags: 0
