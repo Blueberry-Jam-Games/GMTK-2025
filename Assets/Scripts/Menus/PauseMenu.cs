@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-
+        manager.CallForMainMenu();
     }
 
     public void Reset()
