@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &545261655709662004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2005526615092385721}
+  m_Layer: 0
+  m_Name: SnakeCamTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2005526615092385721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545261655709662004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2355095096312211101}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &8829264942304192099
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +190,14 @@ PrefabInstance:
     - target: {fileID: 983149647354665387, guid: 7d60475cb1db87d4e80ed1464fcb0067, type: 3}
       propertyPath: m_Name
       value: snake_body (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728203839372529787, guid: 7d60475cb1db87d4e80ed1464fcb0067, type: 3}
+      propertyPath: MajorRotation
+      value: 2.0549853
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728203839372529787, guid: 7d60475cb1db87d4e80ed1464fcb0067, type: 3}
+      propertyPath: MinorRotation
+      value: 1.3666018
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -332,31 +371,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7585958595823488829, guid: 85cbd703de0013149a496536a16c300a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.1030147
       objectReference: {fileID: 0}
     - target: {fileID: 7585958595823488829, guid: 85cbd703de0013149a496536a16c300a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.28361237
       objectReference: {fileID: 0}
     - target: {fileID: 7585958595823488829, guid: 85cbd703de0013149a496536a16c300a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.0971987
       objectReference: {fileID: 0}
     - target: {fileID: 7585958595823488829, guid: 85cbd703de0013149a496536a16c300a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.97597116
       objectReference: {fileID: 0}
     - target: {fileID: 7585958595823488829, guid: 85cbd703de0013149a496536a16c300a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.09897154
       objectReference: {fileID: 0}
     - target: {fileID: 7585958595823488829, guid: 85cbd703de0013149a496536a16c300a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000057601163
+      value: -0.19313544
       objectReference: {fileID: 0}
     - target: {fileID: 7585958595823488829, guid: 85cbd703de0013149a496536a16c300a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000057601163
+      value: -0.019585485
       objectReference: {fileID: 0}
     - target: {fileID: 7585958595823488829, guid: 85cbd703de0013149a496536a16c300a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -372,8 +411,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7585958595823488829, guid: 85cbd703de0013149a496536a16c300a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2005526615092385721}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7065423829925959047, guid: 85cbd703de0013149a496536a16c300a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3008885717191126415}
   m_SourcePrefab: {fileID: 100100000, guid: 85cbd703de0013149a496536a16c300a, type: 3}
 --- !u!4 &2355095096312211101 stripped
 Transform:
@@ -520,6 +565,14 @@ PrefabInstance:
     - target: {fileID: 983149647354665387, guid: 7d60475cb1db87d4e80ed1464fcb0067, type: 3}
       propertyPath: m_Name
       value: snake_body (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728203839372529787, guid: 7d60475cb1db87d4e80ed1464fcb0067, type: 3}
+      propertyPath: MajorRotation
+      value: 2.0549853
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728203839372529787, guid: 7d60475cb1db87d4e80ed1464fcb0067, type: 3}
+      propertyPath: MinorRotation
+      value: 1.3666018
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

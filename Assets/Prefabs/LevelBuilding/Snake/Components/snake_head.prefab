@@ -89,9 +89,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   domain: {fileID: 0}
-  MajorRotation: 0
-  MinorRotation: 0
-  Radius: 0
+  MajorRotation: 2.184501
+  MinorRotation: 0.7826733
+  Radius: 0.4
   Rotation: 0
 --- !u!114 &8243227686585970292
 MonoBehaviour:

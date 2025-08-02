@@ -2,8 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-
+using UnityEngine.InputSystem;
 
 public class LevelManager : MonoBehaviour
 {
@@ -25,6 +24,8 @@ public class LevelManager : MonoBehaviour
     private Dictionary<String, (GameObject door, String keyName, String buttonName, bool doorOpen)> doorDict;
     private Dictionary<String, (GameObject button, String doorName, bool buttonPressed)> buttonDict;
 
+    private InputAction menu;
+
     void Start()
     {
         doorKeyDict = new Dictionary<string, (GameObject key, bool keyCollected)>();
@@ -37,6 +38,8 @@ public class LevelManager : MonoBehaviour
             Instantiate(gameManagerPrefab); // Autospawn if missing
         }
         gameManager = GameManager.Instance;
+
+        menu = InputSystem.actions.FindAction("OpenMenu");
     }
 
     public void CallForNextLevel()
