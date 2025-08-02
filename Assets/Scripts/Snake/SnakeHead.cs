@@ -19,6 +19,11 @@ public class SnakeHead : MonoBehaviour
     private List<Vector3> positionsXYZ = new List<Vector3>();
 
     public List<TorusTransform> body = new List<TorusTransform>();
+    public GameObject bodyPrefab;
+
+    public LevelManager levelManager;
+    public float turnRadiusNerf = 2f;
+    public float speedFactor = 15f;
 
     private InputAction Forward;
     private InputAction Turn;
@@ -40,10 +45,12 @@ public class SnakeHead : MonoBehaviour
             if (forwardValue != 0)
             {
                 float turnValue = Turn.ReadValue<float>();
-                transformation.Rotate(turnValue, forwardValue);
-                transformation.MoveDirection(transformation.Rotation, forwardValue / 15f);
+                transformation.Rotate(turnValue / turnRadiusNerf, forwardValue);
+                transformation.MoveDirection(transformation.Rotation, forwardValue / speedFactor);
             }
         }
+
+        DetectTaggedItems();
 
         // if (Mathf.Abs((targetRotation - rotation) % 360) <= 5)
         // {
@@ -100,6 +107,28 @@ public class SnakeHead : MonoBehaviour
         {
             positions.RemoveRange(0, queueIndex);
             positionsXYZ.RemoveRange(0, queueIndex);
+        }
+    }
+
+    private void DetectTaggedItems()
+    {
+        Collider[] collide = Physics.OverlapSphere(transform.position + transform.rotation * new Vector3(-0.2f, 0f, 0.06f), 0.1f);
+        foreach (var item in collide)
+        {
+            Debug.Log(item.gameObject.tag + " from head");
+            if (item.gameObject.tag == "Apple")
+            {
+                body.Insert(1, Instantiate(bodyPrefab.GetComponent<TorusTransform>()));
+                item.gameObject.SetActive(false);
+            } else if (item.gameObject.tag == "Key") {
+                levelManager.CollectKey(item.gameObject.name);
+            } else if (item.gameObject.tag == "Door") {
+                levelManager.OpenDoor(item.gameObject.name);
+            } else if (item.gameObject.tag == "Button") {
+                levelManager.StartPressButton(item.gameObject.name);
+            } else if (item.gameObject.tag == "Portal") {
+
+            }
         }
     }
 

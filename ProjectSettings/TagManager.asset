@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Torus
+  - GameManager
+  - Apple
+  - Key
+  - Door
+  - Button
   layers:
   - Default
   - TransparentFX
