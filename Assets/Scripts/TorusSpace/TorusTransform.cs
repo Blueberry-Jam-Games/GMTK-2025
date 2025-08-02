@@ -1,4 +1,5 @@
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -24,6 +25,10 @@ public class TorusTransform : MonoBehaviour
     private Vector3 pPosition;
     private float pRotation;
 
+    bool moved = false;
+
+    //public Vector3 offset;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,6 +39,7 @@ public class TorusTransform : MonoBehaviour
 
     void EditorCode()
     {
+        moved = false;
         if (domain != null)
         {
             if (pPosition != transform.position)
@@ -51,6 +57,7 @@ public class TorusTransform : MonoBehaviour
                 pPosition = transform.position;
                 pRotation = Rotation;
                 NormalRotation();
+                moved = true;
             }
             else if (pMajorRotation != MajorRotation || pMinorRotation != MinorRotation || pRadius != Radius)
             {
@@ -61,14 +68,19 @@ public class TorusTransform : MonoBehaviour
                 pPosition = transform.position;
                 pRotation = Rotation;
                 NormalRotation();
+                moved = true;
             }
             else if (pRotation != Rotation)
             {
                 NormalRotation();
                 pRotation = Rotation;
+                moved = true;
             }
 
-            EditorUtility.SetDirty(this);
+            if (moved)
+            {
+                EditorUtility.SetDirty(this);
+            }
         }
     }
 #endif
@@ -92,7 +104,8 @@ public class TorusTransform : MonoBehaviour
         float newMajorRotation = (distance / ((2 * Mathf.PI) * (domain.majorRadius + domain.minorRadius * Mathf.Sin(MinorRotation)))) * Mathf.Cos(direction) + MajorRotation;
         float newMinorRotation = (distance / ((2 * Mathf.PI) * domain.minorRadius) * Mathf.Sin(direction)) + MinorRotation;
         Vector3 newPosition = domain.ConvertToXYZ(newMajorRotation, newMinorRotation, Radius);
-        Collider[] collide = Physics.OverlapSphere(newPosition, 0.1f);
+
+        Collider[] collide = Physics.OverlapSphere(newPosition + transform.rotation * new Vector3(-0.2f, 0f, 0.06f), 0.01f);
 
         if (collide.Length == 0)
         {
@@ -108,6 +121,23 @@ public class TorusTransform : MonoBehaviour
             }
         }
         NormalRotation();
+    }
+
+    public void Rotate(float inRotation, float rotationModifier)
+    {
+        float checkRotation = (inRotation * 5f) * rotationModifier;
+
+        Quaternion newRotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, 0, checkRotation));
+
+        Collider[] collide = Physics.OverlapSphere(transform.position + newRotation * new Vector3(-0.2f, 0f, 0.06f), 0.01f);
+        if (collide.Length == 0)
+        {
+            Rotation += (inRotation * 5f) * rotationModifier;
+        }
+        else
+        {
+            
+        }
     }
 
     public void NormalRotation()
@@ -148,4 +178,22 @@ public class TorusTransform : MonoBehaviour
         transform.position = domain.ConvertToXYZ(newTransform);
         NormalRotation();
     }
+
+    public bool hasMoved()
+    {
+        return moved;
+    }
+
+    // public void OnDrawGizmos()
+    // {
+    //     Gizmos.color = new Color(0.0f, 1f, 0.0f);
+
+    //     float distance = 0.01f;
+    //     float direction = 0;
+    //     float newMajorRotation = (distance / ((2 * Mathf.PI) * (domain.majorRadius + domain.minorRadius * Mathf.Sin(MinorRotation)))) * Mathf.Cos(direction) + MajorRotation;
+    //     float newMinorRotation = (distance / ((2 * Mathf.PI) * domain.minorRadius) * Mathf.Sin(direction)) + MinorRotation;
+    //     Vector3 newPosition = domain.ConvertToXYZ(newMajorRotation, newMinorRotation, Radius);
+    //     newPosition += transform.rotation * offset;
+    //     Gizmos.DrawSphere(newPosition, 0.09f);
+    // }
 }

@@ -23,8 +23,11 @@ public class TorusWarp : MonoBehaviour
         // Instantiate a new mesh to prevent editing the shared mesh
         MeshFilter filter = GetComponent<MeshFilter>();
 
-        altered = Instantiate(mesh); // Create a unique copy
-        filter.mesh = altered; // Assign it to this object only
+        if (mesh != null)
+        {
+            altered = Instantiate(mesh); // Create a unique copy
+            filter.mesh = altered; // Assign it to this object only
+        }
 
         if (Application.isPlaying)
         {
@@ -35,36 +38,42 @@ public class TorusWarp : MonoBehaviour
     void Update()
     {
 #if UNITY_EDITOR
-        UpdateVerticies();
+        if (torus.hasMoved())
+        {
+            UpdateVerticies();
+        }
 #endif
     }
 
     void UpdateVerticies()
     {
-        savedRotation = torus.Rotation;
-        savedRadius = torus.Radius;
-
-        Quaternion reverseRotation = Quaternion.AngleAxis(-savedRotation, Vector3.forward);
-        Quaternion correctRotation = Quaternion.AngleAxis(savedRotation, Vector3.forward);
-
-        Vector3[] vertices = mesh.vertices;
-        Vector3[] finalVertices = altered.vertices;
-
-        for (int i = 0; i < vertices.Length; i++)
+        if (mesh != null && altered != null)
         {
-            Vector3 vertex = vertices[i];
-            vertex = reverseRotation * vertex;
+            savedRotation = torus.Rotation;
+            savedRadius = torus.Radius;
 
-            vertex.y += vertex.y / (savedRadius / 100) * vertex.z;
+            Quaternion reverseRotation = Quaternion.AngleAxis(-savedRotation, Vector3.forward);
+            Quaternion correctRotation = Quaternion.AngleAxis(savedRotation, Vector3.forward);
 
-            vertex = correctRotation * vertex;
+            Vector3[] vertices = mesh.vertices;
+            Vector3[] finalVertices = altered.vertices;
 
-            finalVertices[i] = vertex;
-        }
+            for (int i = 0; i < vertices.Length; i++)
+            {
+                Vector3 vertex = vertices[i];
+                vertex = reverseRotation * vertex;
 
-        altered.vertices = finalVertices;
+                vertex.y += vertex.y / (savedRadius / 100) * vertex.z;
+
+                vertex = correctRotation * vertex;
+
+                finalVertices[i] = vertex;
+            }
+
+            altered.vertices = finalVertices;
 #if UNITY_EDITOR
-        EditorUtility.SetDirty(this);
+            EditorUtility.SetDirty(this);
 #endif
+        } 
     }
 }
