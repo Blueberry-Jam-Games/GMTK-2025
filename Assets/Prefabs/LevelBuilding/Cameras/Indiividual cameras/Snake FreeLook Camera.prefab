@@ -12,9 +12,7 @@ GameObject:
   - component: {fileID: 236743865561342269}
   - component: {fileID: 4941189426447789021}
   - component: {fileID: 6376709737344179459}
-  - component: {fileID: 6621245476035998671}
   - component: {fileID: 6189757959334804267}
-  - component: {fileID: 8931440656498379406}
   m_Layer: 0
   m_Name: Snake FreeLook Camera
   m_TagString: Untagged
@@ -30,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8311769709660847776}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7575632, y: -0.33185962, z: -0.328515, w: -0.45611972}
+  m_LocalRotation: {x: -0.7575636, y: 0.33186063, z: 0.32851437, w: 0.45611873}
   m_LocalPosition: {x: 0.42744982, y: -5.287426, z: 2.8660374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -114.616, y: 27.914993, z: 29.186996}
 --- !u!114 &236743865561342269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,23 +170,6 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
---- !u!114 &6621245476035998671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8311769709660847776}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a076c17fe76165e4f8ed21498b877bf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Easing: 0
-  Modifiers: []
-  references:
-    version: 2
-    RefIds: []
 --- !u!114 &6189757959334804267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,42 +222,3 @@ MonoBehaviour:
         DecelTime: 0.5
   PlayerIndex: -1
   AutoEnableInputs: 1
---- !u!114 &8931440656498379406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8311769709660847776}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe43d662878a7c43bcd44d43c9e2094, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollideAgainst:
-    serializedVersion: 2
-    m_Bits: 1
-  IgnoreTag: 
-  TransparentLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  MinimumDistanceFromTarget: 0.3
-  AvoidObstacles:
-    Enabled: 1
-    DistanceLimit: 0
-    MinimumOcclusionTime: 0
-    CameraRadius: 0.41
-    UseFollowTarget:
-      Enabled: 0
-      YOffset: 0
-    Strategy: 0
-    MaximumEffort: 4
-    SmoothingTime: 0
-    Damping: 0.4
-    DampingWhenOccluded: 0.2
-  ShotQualityEvaluation:
-    Enabled: 1
-    OptimalDistance: 10
-    NearLimit: 5
-    FarLimit: 30
-    MaxQualityBoost: 0.2
