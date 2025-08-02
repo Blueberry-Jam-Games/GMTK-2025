@@ -178,8 +178,8 @@
                 },
                 {
                     "name": "",
-                    "id": "0921df3c-e0bf-416b-94fb-b0b3cd8ebd5c",
-                    "path": "<Keyboard>/enter",
+                    "id": "b729fc2d-b854-47b8-a5e5-58e82b1ece3e",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -531,6 +531,17 @@
                     "name": "down",
                     "id": "c0c2f6a2-bbb3-4d41-8f5f-a78ed66bce16",
                     "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Down",
+                    "id": "c8f298d7-cb5e-4057-ae68-8f75685da120",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",

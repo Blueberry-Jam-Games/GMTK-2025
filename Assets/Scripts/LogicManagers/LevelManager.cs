@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-
+using UnityEngine.InputSystem;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,6 +12,8 @@ public class LevelManager : MonoBehaviour
     public bool credited = false;
     public GameObject gameManagerPrefab;
 
+    private InputAction menu;
+
     void Start()
     {
         AssignMenus();
@@ -21,6 +22,8 @@ public class LevelManager : MonoBehaviour
             Instantiate(gameManagerPrefab); // Autospawn if missing
         }
         gameManager = GameManager.Instance;
+
+        menu = InputSystem.actions.FindAction("OpenMenu");
     }
 
     public void CallForNextLevel()

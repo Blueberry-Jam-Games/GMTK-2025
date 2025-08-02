@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.unify.unified-universal-blur": "https://github.com/lukakldiashvili/Unified-Universal-Blur.git",
+    "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.8",
     "com.unity.cinemachine": "3.1.4",
     "com.unity.collab-proxy": "2.8.2",
@@ -13,6 +15,7 @@
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.8",
     "io.blueberryjam.blueberry-jam-games.core": "https://github.com/Blueberry-Jam-Games/Blueberry-Core.git?path=/Packages/blueberry-jam-core",
+    "nl.jeffreylanters.tweens": "https://github.com/jeffreylanters/unity-tweens.git",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",

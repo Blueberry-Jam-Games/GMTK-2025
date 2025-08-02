@@ -1,5 +1,20 @@
 {
   "dependencies": {
+    "com.unify.unified-universal-blur": {
+      "version": "https://github.com/lukakldiashvili/Unified-Universal-Blur.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.render-pipelines.universal": "14.0.11"
+      },
+      "hash": "3f7b28476cb83f2d56cf73a13c81de798a94f005"
+    },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.8",
       "depth": 0,
@@ -239,6 +254,13 @@
         "com.unity.shadergraph": "14.0.10"
       },
       "hash": "c7b765ac7903f413b249277de0d9ab8f23a9ee75"
+    },
+    "nl.jeffreylanters.tweens": {
+      "version": "https://github.com/jeffreylanters/unity-tweens.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "a9a39fe9d4e8ff8ef655bfcee2912f7af8fa1e90"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
