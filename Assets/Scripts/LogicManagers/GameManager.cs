@@ -38,7 +38,7 @@ public class GameManager : SingletonGameObject<GameManager>
     public void MainMenuLoad()
     {
         level = 0;
-        transitioner.LoadNewScene("Main Menu", this);
+        transitioner.LoadNewScene("MainMenu", this);
     }
 
     public void FinishedTransition()
