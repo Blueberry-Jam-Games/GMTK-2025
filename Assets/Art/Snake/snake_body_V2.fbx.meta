@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5982937bb372920449bebdefd284a115
+guid: 883c93eb7b7f5f54ba2df450385f1ab2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: snake_head_MAT
-    second: {fileID: 2100000, guid: f1b7f4073876d214bb619a6493047f0a, type: 2}
+      name: snake_body_MAT
+    second: {fileID: 2100000, guid: 60d05b252824ffc42815e4d9f7433dd1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -73,13 +73,13 @@ ModelImporter:
     useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
-    normalSmoothAngle: 0
+    normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 0
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 0
-    normalSmoothingSource: 2
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
   humanDescription:
