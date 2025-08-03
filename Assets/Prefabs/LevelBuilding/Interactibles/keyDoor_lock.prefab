@@ -100,6 +100,7 @@ MonoBehaviour:
   MinorRotation: 0
   Radius: 0
   Rotation: 0
+  overrideRadius: 0
 --- !u!114 &7307414300734743331
 MonoBehaviour:
   m_ObjectHideFlags: 0
