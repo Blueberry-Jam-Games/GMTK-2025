@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6141023292803533152}
   - component: {fileID: 3691654091781051061}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: PortalPair
   m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,23 +136,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 376098898213962045, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
       propertyPath: savedRadius
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 376098898213962045, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
       propertyPath: savedRotation
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 376098898213962045, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
+      propertyPath: savedMajorRadius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 376098898213962045, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
+      propertyPath: savedTransformRotation.x
+      value: 274.31247
+      objectReference: {fileID: 0}
+    - target: {fileID: 376098898213962045, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
+      propertyPath: savedTransformRotation.y
+      value: 141.83969
+      objectReference: {fileID: 0}
+    - target: {fileID: 376098898213962045, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
+      propertyPath: savedTransformRotation.z
+      value: -0.000022707507
+      objectReference: {fileID: 0}
     - target: {fileID: 6136218009002486248, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2728982
+      value: 1.2636058
       objectReference: {fileID: 0}
     - target: {fileID: 6136218009002486248, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7977349
+      value: 0.59830123
       objectReference: {fileID: 0}
     - target: {fileID: 6136218009002486248, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6198707
+      value: -1.6080453
       objectReference: {fileID: 0}
     - target: {fileID: 6136218009002486248, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -186,9 +202,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: TunnelBlock Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6801536496089363282, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8540234002556616537, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
       propertyPath: Radius
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8540234002556616537, guid: 0370d60d2fd8dd7478f5142fc8a47f2b, type: 3}
       propertyPath: Rotation

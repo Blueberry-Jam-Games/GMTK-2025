@@ -216,6 +216,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 5952607908348569347, guid: 6079280de4a67be4b902699c8513f3b2, type: 2}
     value: {fileID: 7207113428374117926}
+  - key: {fileID: -4340607033462806277, guid: 6079280de4a67be4b902699c8513f3b2, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - e24fcd9002d1d0841be14f9f2595dac9: {fileID: 264944372818567007}
@@ -409,19 +411,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2967464251639046612, guid: fec3b323f5dc21d43807d589349d07b6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.716932
+      value: 0.7316181
       objectReference: {fileID: 0}
     - target: {fileID: 2967464251639046612, guid: fec3b323f5dc21d43807d589349d07b6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.3555416
+      value: 0.32424706
       objectReference: {fileID: 0}
     - target: {fileID: 2967464251639046612, guid: fec3b323f5dc21d43807d589349d07b6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.47438455
+      value: 0.48978424
       objectReference: {fileID: 0}
     - target: {fileID: 2967464251639046612, guid: fec3b323f5dc21d43807d589349d07b6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.3668216
+      value: -0.34599167
       objectReference: {fileID: 0}
     - target: {fileID: 2967464251639046612, guid: fec3b323f5dc21d43807d589349d07b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
