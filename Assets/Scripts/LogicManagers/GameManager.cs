@@ -9,6 +9,7 @@ public class GameManager : SingletonGameObject<GameManager>
     private string[] allLevels = { "Main Menu", "Level 1", "Level 2", "Level 3", "Thank You" };
 
     public SceneTransitioner transitioner;
+    TimelinePlayer timeline;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,8 @@ public class GameManager : SingletonGameObject<GameManager>
 
     public void FinishedTransition()
     {
-        
+        timeline = FindAnyObjectByType<TimelinePlayer>();
+        timeline.PlayTimeline();
+
     }
 }
