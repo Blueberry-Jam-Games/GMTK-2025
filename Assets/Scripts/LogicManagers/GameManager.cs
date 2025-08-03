@@ -18,6 +18,11 @@ public class GameManager : SingletonGameObject<GameManager>
     {
         level = 0;
         transitioner = FindFirstObjectByType<SceneTransitioner>();
+
+        if (SceneManager.GetActiveScene().name != allLevels[0])
+        {
+            Restart();
+        }
     }
 
     // Update is called once per frame
