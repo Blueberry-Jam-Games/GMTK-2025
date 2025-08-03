@@ -125,12 +125,9 @@ MonoBehaviour:
   level: 0
   allLevels:
   - MainMenu
-  - GameLevel1
-  - GameLevel2
-  - GameLevel3
-  - GameLevel4
-  - GameLevel5
-  - Thank You
+  - OneLevel
+  - TwoLevel
+  - ThankYou
   transitioner: {fileID: 1598071592431891951}
 --- !u!114 &1598071592431891951
 MonoBehaviour:
