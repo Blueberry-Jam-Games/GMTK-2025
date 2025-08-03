@@ -131,6 +131,8 @@ public class SceneTransitioner : MonoBehaviour
 
         OnSceneLoaded?.Invoke(sceneName);
 
+        yield return waitForTransition;
+
         while (loadReasons.Count != 0)
         {
             Debug.Log(string.Join(",", loadReasons));

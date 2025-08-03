@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : SingletonGameObject<GameManager>
 {
     public int level;
-    private string[] allLevels = { "Main Menu", "Level 1", "Level 2", "Level 3", "Thank You" };
+    public string[] allLevels = { "Main Menu", "GameLevel1", "Level 2", "Level 3", "Thank You" };
 
     public SceneTransitioner transitioner;
     TimelinePlayer timeline;

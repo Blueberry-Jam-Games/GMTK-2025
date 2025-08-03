@@ -2628,6 +2628,10 @@ PrefabInstance:
       propertyPath: transitioner
       value: 
       objectReference: {fileID: 1838766564}
+    - target: {fileID: 5061015946815574006, guid: efa776265dda71242ad56833e1efbd91, type: 3}
+      propertyPath: 'allLevels.Array.data[1]'
+      value: GameLevel1
+      objectReference: {fileID: 0}
     - target: {fileID: 6370529320691490412, guid: efa776265dda71242ad56833e1efbd91, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.51324
