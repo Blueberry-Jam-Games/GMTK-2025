@@ -21,6 +21,10 @@ public class Portal : MonoBehaviour
 
     public void UsePortal()
     {
+        
+
+        Debug.Log(sisterPortal.name);
+        Debug.Log(sisterPortal.GetComponent<Portal>().thisPortalActive);
         Vector4 orig = sisterPortal.GetComponent<Portal>().GetMyV4();
         snakeHead.transformation.SetPosition(new Vector4(orig.x,orig.y,orig.z,orig.w+90));
     }
