@@ -50,8 +50,12 @@ MonoBehaviour:
   paused: 0
   credited: 0
   gameManagerPrefab: {fileID: 138493293509193164, guid: efa776265dda71242ad56833e1efbd91, type: 3}
-  doorKeys: []
-  buttons: []
-  doors: []
-  keyOpensDoor: 
-  buttonOpensDoor: 
+  doorKeys:
+  - {fileID: 6941355881057450124, guid: c8db03367939a5343b1ab0bb501ed306, type: 3}
+  buttons:
+  - {fileID: 1102901682476674295, guid: d7b292137b237fc4aabe94ec10034c09, type: 3}
+  doors:
+  - {fileID: 1434225585277407394, guid: 1d669d4362589cd47b3147eb4238c79a, type: 3}
+  - {fileID: 2477217474095770369, guid: efd7ef265a2f6274a9a7c601c974cda5, type: 3}
+  keyOpensDoor: ffffffff00000000
+  buttonOpensDoor: 0000000001000000

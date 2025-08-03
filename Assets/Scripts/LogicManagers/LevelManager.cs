@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour
     private Dictionary<String, (GameObject button, String doorName, bool buttonPressed)> buttonDict;
 
     private InputAction menu;
+    private InputAction reset;
 
     void Start()
     {
@@ -40,6 +41,7 @@ public class LevelManager : MonoBehaviour
         gameManager = GameManager.Instance;
 
         menu = InputSystem.actions.FindAction("OpenMenu");
+        reset = InputSystem.actions.FindAction("ResetLevel");
     }
 
     public void CallForNextLevel()
