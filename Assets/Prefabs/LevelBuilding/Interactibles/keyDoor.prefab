@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e7e0df2e00548b49b15930beeb92b12, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -70,6 +74,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e7e0df2e00548b49b15930beeb92b12, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6982954993516498694}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e7e0df2e00548b49b15930beeb92b12, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7116949332637611793}
   m_SourcePrefab: {fileID: 100100000, guid: 9e7e0df2e00548b49b15930beeb92b12, type: 3}
 --- !u!1 &6941355881057450124 stripped
 GameObject:
@@ -107,5 +114,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torus: {fileID: 6656872300213605790}
   savedRadius: 0
+  savedMajorRadius: 0
   savedRotation: 0
+  savedTransformRotation: {x: 0, y: 0, z: 0}
   mesh: {fileID: 3581873577330021610, guid: 9e7e0df2e00548b49b15930beeb92b12, type: 3}
+--- !u!65 &7116949332637611793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941355881057450124}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.00025048328, y: 0.0022952766, z: 0.0023890526}
+  m_Center: {x: 2.0609278e-17, y: -0.000053504322, z: 0.0011394477}
