@@ -1376,31 +1376,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6630929319261654512, guid: aec57de8c195bd14782669cffbaab16a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.67551774
+      value: 0.67523736
       objectReference: {fileID: 0}
     - target: {fileID: 6630929319261654512, guid: aec57de8c195bd14782669cffbaab16a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5892792
+      value: 0.5892272
       objectReference: {fileID: 0}
     - target: {fileID: 6630929319261654512, guid: aec57de8c195bd14782669cffbaab16a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.153592
+      value: -2.1539586
       objectReference: {fileID: 0}
     - target: {fileID: 6630929319261654512, guid: aec57de8c195bd14782669cffbaab16a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.111432366
+      value: -0.111386314
       objectReference: {fileID: 0}
     - target: {fileID: 6630929319261654512, guid: aec57de8c195bd14782669cffbaab16a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.09210726
+      value: 0.0920261
       objectReference: {fileID: 0}
     - target: {fileID: 6630929319261654512, guid: aec57de8c195bd14782669cffbaab16a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7626793
+      value: -0.7628341
       objectReference: {fileID: 0}
     - target: {fileID: 6630929319261654512, guid: aec57de8c195bd14782669cffbaab16a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.63041216
+      value: -0.63024485
       objectReference: {fileID: 0}
     - target: {fileID: 7477914371218008113, guid: aec57de8c195bd14782669cffbaab16a, type: 3}
       propertyPath: Radius
@@ -1532,11 +1532,11 @@ PrefabInstance:
       objectReference: {fileID: 1991720852}
     - target: {fileID: 9166589078280871578, guid: aec57de8c195bd14782669cffbaab16a, type: 3}
       propertyPath: MajorRotation
-      value: -1.280636
+      value: -1.2808127
       objectReference: {fileID: 0}
     - target: {fileID: 9166589078280871578, guid: aec57de8c195bd14782669cffbaab16a, type: 3}
       propertyPath: MinorRotation
-      value: 0.18932252
+      value: 0.18978249
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
