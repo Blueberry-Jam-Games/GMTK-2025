@@ -98,11 +98,6 @@ public class TorusTransform : MonoBehaviour
 
     }
 
-    public void LateUpdate()
-    {
-        moved = false;
-    }
-
     public void MoveDirection(float direction, float distance)
     {
         direction *= Mathf.Deg2Rad;
