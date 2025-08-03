@@ -8,13 +8,13 @@ public class SnakeButton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Collider[] collide = Physics.OverlapCapsule(transform.position, transform.position + transform.rotation * new Vector3(0,0,0.1f), 0.1f);
+        Collider[] collide = Physics.OverlapCapsule(transform.position, transform.position + transform.rotation * new Vector3(0, 0, 0.1f), 0.1f);
         pressedThisUpdate = false;
 
         foreach (var item in collide)
@@ -39,5 +39,10 @@ public class SnakeButton : MonoBehaviour
         {
             pressedLastUpdate = true;
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(transform.position + transform.rotation * new Vector3(0, 0, 0.1f), 0.1f);
     }
 }
