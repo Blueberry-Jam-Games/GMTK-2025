@@ -15,6 +15,7 @@ TagManager:
   - Tail
   - StartCamera
   - Portal
+  - EndCamera
   layers:
   - Default
   - TransparentFX

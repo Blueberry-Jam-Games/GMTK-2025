@@ -44,7 +44,11 @@ public class LevelManager : MonoBehaviour
 
     public void CallForNextLevel()
     {
-        gameManager.NextLevel();
+        TimelinePlayer timeline = GameObject.FindWithTag("EndCamera").GetComponent<TimelinePlayer>();
+        timeline.PlayTimeline();
+        SnakeHead s = GameObject.FindWithTag("Head").GetComponent<SnakeHead>();
+        s.autopilot = true;
+        gameManager.NextLevelDelayed(5);
     }
 
     public void CallForMainMenu()

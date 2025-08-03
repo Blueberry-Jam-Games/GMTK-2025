@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using BJ;
 using UnityEngine;
@@ -45,6 +46,17 @@ public class GameManager : SingletonGameObject<GameManager>
             level++;
             transitioner.LoadNewScene(allLevels[level], this);
         }
+    }
+
+    public void NextLevelDelayed(float seconds)
+    {
+        StartCoroutine(WaitFor(seconds));
+    }
+
+    private IEnumerator WaitFor(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        NextLevel();
     }
 
     public void MainMenuLoad()

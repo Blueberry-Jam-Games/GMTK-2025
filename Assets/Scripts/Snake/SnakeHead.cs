@@ -32,6 +32,8 @@ public class SnakeHead : MonoBehaviour
 
     public bool OnButtonNow = false;
 
+    public bool autopilot = false;
+
     void Start()
     {
         body.Clear();
@@ -43,7 +45,7 @@ public class SnakeHead : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (transformation != null)
+        if (transformation != null && !autopilot)
         {
             float forwardValue = Forward.ReadValue<float>();
             if (forwardValue != 0)
@@ -70,7 +72,14 @@ public class SnakeHead : MonoBehaviour
         //     rotation += 2;
         // }
 
-        updatePath();
+        if (!autopilot)
+        {
+            updatePath();
+        }
+        else
+        {
+            LoopPath();
+        }
     }
 
     private void updatePath()
@@ -114,6 +123,32 @@ public class SnakeHead : MonoBehaviour
         }
     }
 
+    public void LoopPath()
+    {
+        int queueIndex = positions.Count - 1;
+
+        transformation.SetPosition(positions[0]);
+        positions.Add(positions[0]);
+        positions.RemoveAt(0);
+        
+        foreach (TorusTransform s in body)
+        {
+            for (int i = queueIndex; i > 0; i--)
+            {
+                if (Vector3.Distance(positionsXYZ[i], positionsXYZ[queueIndex]) >= distanceBetweenSegments)
+                {
+                    if (!s.gameObject.activeSelf)
+                    {
+                        s.gameObject.SetActive(true);
+                    }
+                    s.SetPosition(positions[i]);
+                    queueIndex = i;
+                    break;
+                }
+            }
+        }
+    }
+
     private void DetectTaggedItems()
     {
         Collider[] collide = Physics.OverlapSphere(transform.position + transform.rotation * new Vector3(-0.2f, 0f, 0.06f), 0.1f);
@@ -146,11 +181,13 @@ public class SnakeHead : MonoBehaviour
             {
                 item.gameObject.GetComponent<Portal>().UsePortal();
             }
-            else if (item.gameObject.tag == "Tail") {
+            else if (item.gameObject.tag == "Tail")
+            {
                 levelManager.CallForNextLevel();
             }
         }
-        if (!OnButtonNow && OnButton) {
+        if (!OnButtonNow && OnButton)
+        {
             OnButton = false;
         }
     }
