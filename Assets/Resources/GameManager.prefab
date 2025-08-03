@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 8636372278526569146}
   - component: {fileID: 2906264701586294603}
   - component: {fileID: 1598071592431891951}
+  - component: {fileID: 7224800923599866817}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   allLevels:
-  - Main Menu
+  - MainMenu
   - GameLevel1
   - GameLevel2
   - GameLevel3
@@ -145,6 +146,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossfade: {fileID: 1733568392322959885}
   transitionTime: 1
+--- !u!114 &7224800923599866817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2868734702803241168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a743747c820c91e47b737c66cafb30e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 226d44d1c799aa04e8acf40f175a0d33, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 22bfcc12eb8623d418eb1fbd72a57408, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    spatialBlend: 0
+    playOnAwake: 1
+    source: {fileID: 0}
+  - name: OpenDoor
+    clip: {fileID: 8300000, guid: 5c3fb89dfc347c7478e5e047d05ee581, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 22bfcc12eb8623d418eb1fbd72a57408, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: CloseDoor
+    clip: {fileID: 8300000, guid: 954254cbf3a42844ca9e558ba81596d4, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 22bfcc12eb8623d418eb1fbd72a57408, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: ItemPickup
+    clip: {fileID: 8300000, guid: d629a1ecc5ba16e4e9fa295b2e7d23f1, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 22bfcc12eb8623d418eb1fbd72a57408, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: ApplePickup
+    clip: {fileID: 8300000, guid: 48068ea5394839744999fc0e6a7d8d6c, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 22bfcc12eb8623d418eb1fbd72a57408, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Warp
+    clip: {fileID: 8300000, guid: b7122393a073f624c827604f2ff78241, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 22bfcc12eb8623d418eb1fbd72a57408, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    source: {fileID: 0}
 --- !u!1 &6466097688950445553
 GameObject:
   m_ObjectHideFlags: 0

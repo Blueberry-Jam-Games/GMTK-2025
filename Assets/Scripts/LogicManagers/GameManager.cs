@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using BJ;
 using UnityEngine;
@@ -47,6 +48,17 @@ public class GameManager : SingletonGameObject<GameManager>
         }
     }
 
+    public void NextLevelDelayed(float seconds)
+    {
+        StartCoroutine(WaitFor(seconds));
+    }
+
+    private IEnumerator WaitFor(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        NextLevel();
+    }
+
     public void MainMenuLoad()
     {
         level = 0;
@@ -57,7 +69,10 @@ public class GameManager : SingletonGameObject<GameManager>
     {
         
         timeline = GameObject.FindWithTag("StartCamera").GetComponent<TimelinePlayer>();
-        timeline.PlayTimeline();
+        if (timeline != null)
+        {
+            timeline.PlayTimeline();
+        }
         loadingScene = false;
     }
 }

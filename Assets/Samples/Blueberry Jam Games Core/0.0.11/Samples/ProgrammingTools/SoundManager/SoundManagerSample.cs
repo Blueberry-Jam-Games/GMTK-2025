@@ -10,19 +10,20 @@ public class SoundManagerSample : MonoBehaviour
     private void Start()
     {
         sounds = GetComponent<SoundManager>();
+        sounds.PlaySound("wand1");
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            // left click
-            sounds.PlaySound("wand1");
-        }
-        else if (Input.GetMouseButtonDown(1))
-        {
-            // right click
-            sounds.PlaySound("wand2");
-        }
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     // left click
+        //     sounds.PlaySound("wand1");
+        // }
+        // else if (Input.GetMouseButtonDown(1))
+        // {
+        //     // right click
+        //     sounds.PlaySound("wand2");
+        // }
     }
 }

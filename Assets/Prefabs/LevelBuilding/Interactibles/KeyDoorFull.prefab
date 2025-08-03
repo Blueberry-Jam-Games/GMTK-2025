@@ -151,7 +151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1434225585277407394, guid: 1d669d4362589cd47b3147eb4238c79a, type: 3}
       propertyPath: m_Name
-      value: door_left (1)
+      value: door_left
       objectReference: {fileID: 0}
     - target: {fileID: 1777994134247492120, guid: 1d669d4362589cd47b3147eb4238c79a, type: 3}
       propertyPath: m_LocalPosition.x
