@@ -69,7 +69,10 @@ public class GameManager : SingletonGameObject<GameManager>
     {
         
         timeline = GameObject.FindWithTag("StartCamera").GetComponent<TimelinePlayer>();
-        timeline.PlayTimeline();
+        if (timeline != null)
+        {
+            timeline.PlayTimeline();
+        }
         loadingScene = false;
     }
 }

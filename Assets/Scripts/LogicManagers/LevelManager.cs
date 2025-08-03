@@ -173,5 +173,4 @@ public class LevelManager : MonoBehaviour
         credited = !credited;
         creditsUI.SetActive(credited);
     }
-
 }

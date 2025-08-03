@@ -195,8 +195,8 @@ MonoBehaviour:
     spatialBlend: 0
     playOnAwake: 0
     source: {fileID: 0}
-  - name: ItemPickup
-    clip: {fileID: 8300000, guid: d629a1ecc5ba16e4e9fa295b2e7d23f1, type: 3}
+  - name: ApplePickup
+    clip: {fileID: 8300000, guid: 48068ea5394839744999fc0e6a7d8d6c, type: 3}
     mixerGroup: {fileID: 24300002, guid: 22bfcc12eb8623d418eb1fbd72a57408, type: 2}
     volume: 1
     pitch: 1
@@ -204,12 +204,12 @@ MonoBehaviour:
     spatialBlend: 0
     playOnAwake: 0
     source: {fileID: 0}
-  - name: ItemPickup
-    clip: {fileID: 8300000, guid: d629a1ecc5ba16e4e9fa295b2e7d23f1, type: 3}
+  - name: Warp
+    clip: {fileID: 8300000, guid: b7122393a073f624c827604f2ff78241, type: 3}
     mixerGroup: {fileID: 24300002, guid: 22bfcc12eb8623d418eb1fbd72a57408, type: 2}
     volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
     spatialBlend: 0
     playOnAwake: 0
     source: {fileID: 0}
