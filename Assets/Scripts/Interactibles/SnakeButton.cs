@@ -5,6 +5,7 @@ public class SnakeButton : MonoBehaviour
     public bool pressedLastUpdate = false;
     public bool pressedThisUpdate = false;
     public LevelManager levelManager;
+    public SnakeHead snakeHead;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,7 +30,7 @@ public class SnakeButton : MonoBehaviour
                 pressedThisUpdate = true;
             }
         }
-        if (pressedLastUpdate && !pressedThisUpdate)
+        if (pressedLastUpdate && !pressedThisUpdate && !snakeHead.GetOnButton())
         {
             Debug.Log("hfihesyiufhyusdhfuihsdiufhisdhfisdhifuhsduifhisudhdfuisdhf");
             levelManager.EndtPressButton(this.name);
@@ -39,5 +40,11 @@ public class SnakeButton : MonoBehaviour
         {
             pressedLastUpdate = true;
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        //Gizmos.DrawSphere(transform.position + transform.rotation * new Vector3(0, 0, 0.1f), 0.1f);
+        Gizmos.DrawSphere(transform.position, 0.03f);
     }
 }

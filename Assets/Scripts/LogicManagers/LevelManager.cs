@@ -100,7 +100,7 @@ public class LevelManager : MonoBehaviour
             doorDict[name] = (doorDict[name].door, doorDict[name].keyName, doorDict[name].buttonName, true);
             doorDict[name].door.SetActive(false);
         }
-        else if (doorDict[name].keyName == "")
+        else if (doorDict[name].keyName == "" && buttonDict[doorDict[name].buttonName].buttonPressed)
         {
             doorDict[name].door.SetActive(false);
         }

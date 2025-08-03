@@ -25,8 +25,12 @@ public class SnakeHead : MonoBehaviour
     public float turnRadiusNerf = 2f;
     public float speedFactor = 15f;
 
+    public bool OnButton = false;
+
     private InputAction Forward;
     private InputAction Turn;
+
+    public bool OnButtonNow = false;
 
     void Start()
     {
@@ -113,6 +117,7 @@ public class SnakeHead : MonoBehaviour
     private void DetectTaggedItems()
     {
         Collider[] collide = Physics.OverlapSphere(transform.position + transform.rotation * new Vector3(-0.2f, 0f, 0.06f), 0.1f);
+        OnButtonNow = false;
         foreach (var item in collide)
         {
             //Debug.Log(item.gameObject.tag + " from head");
@@ -120,16 +125,39 @@ public class SnakeHead : MonoBehaviour
             {
                 body.Insert(1, Instantiate(bodyPrefab.GetComponent<TorusTransform>()));
                 item.gameObject.SetActive(false);
-            } else if (item.gameObject.tag == "Key") {
+            }
+            else if (item.gameObject.tag == "Key")
+            {
                 levelManager.CollectKey(item.gameObject.name);
-            } else if (item.gameObject.tag == "Door") {
+            }
+            else if (item.gameObject.tag == "Door")
+            {
                 levelManager.OpenDoor(item.gameObject.name);
-            } else if (item.gameObject.tag == "Button") {
-                //levelManager.StartPressButton(item.gameObject.name);
-            } else if (item.gameObject.tag == "Portal") {
-
+            }
+            else if (item.gameObject.tag == "Button")
+            {
+                if (!OnButton)
+                {
+                    levelManager.StartPressButton(item.gameObject.name);
+                    OnButtonNow = true;
+                }
+            }
+            else if (item.gameObject.tag == "Portal")
+            {
+                item.gameObject.GetComponent<Portal>().UsePortal();
+            }
+            else if (item.gameObject.tag == "Tail") {
+                levelManager.CallForNextLevel();
             }
         }
+        if (!OnButtonNow && OnButton) {
+            OnButton = false;
+        }
+    }
+
+    public bool GetOnButton()
+    {
+        return OnButton;
     }
 
     void OnDrawGizmos()
@@ -138,6 +166,6 @@ public class SnakeHead : MonoBehaviour
         {
             Gizmos.DrawSphere(c, 0.01f);
         }
+        //Gizmos.DrawSphere(transform.position + transform.rotation * new Vector3(-0.2f, 0f, 0.06f), 0.1f);
     }
-
 }

@@ -18,31 +18,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380ce86e5c1762d4299496c8e91fec5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0230494
+      value: -0.8768994
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380ce86e5c1762d4299496c8e91fec5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000011618938
+      value: -0.0000015608481
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380ce86e5c1762d4299496c8e91fec5b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.955704
+      value: 0.8191748
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380ce86e5c1762d4299496c8e91fec5b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.91723657
+      value: 0.00000085469804
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380ce86e5c1762d4299496c8e91fec5b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000012746585
+      value: 0.91723657
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380ce86e5c1762d4299496c8e91fec5b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.39834297
+      value: -0.0000003711835
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380ce86e5c1762d4299496c8e91fec5b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000006012218
+      value: 0.39834306
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380ce86e5c1762d4299496c8e91fec5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -101,8 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   domain: {fileID: 0}
   MajorRotation: 2.3902156
-  MinorRotation: 1.5707992
-  Radius: 0.4
+  MinorRotation: -1.5707983
+  Radius: 0.8
   Rotation: 0
 --- !u!136 &7244692318004129128
 CapsuleCollider:
