@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : SingletonGameObject<GameManager>
 {
     public int level;
-    public string[] allLevels = { "Main Menu", "GameLevel1", "Level 2", "Level 3", "Thank You" };
+    public string[] allLevels;
 
     public SceneTransitioner transitioner;
     TimelinePlayer timeline;
+
+    private bool loadingScene = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +34,12 @@ public class GameManager : SingletonGameObject<GameManager>
 
     public void NextLevel()
     {
-        level++;
-        transitioner.LoadNewScene(allLevels[level], this);
+        if (!loadingScene)
+        {
+            loadingScene = true;
+            level++;
+            transitioner.LoadNewScene(allLevels[level], this);
+        }
     }
 
     public void MainMenuLoad()
@@ -47,6 +53,6 @@ public class GameManager : SingletonGameObject<GameManager>
         
         timeline = GameObject.FindWithTag("StartCamera").GetComponent<TimelinePlayer>();
         timeline.PlayTimeline();
-
+        loadingScene = false;
     }
 }
