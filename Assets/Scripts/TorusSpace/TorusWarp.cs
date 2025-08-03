@@ -51,10 +51,13 @@ public class TorusWarp : MonoBehaviour
     {
         if (mesh != null && altered != null)
         {
-            savedRotation = torus.Rotation;
-            savedRadius = torus.Radius;
-            savedMajorRadius = torus.domain.majorRadius;
-            savedTransformRotation = transform.rotation.eulerAngles;
+            if (torus.hasMoved())
+            {
+                savedRotation = torus.Rotation;
+                savedRadius = torus.Radius;
+                savedMajorRadius = torus.domain.majorRadius;
+                savedTransformRotation = transform.rotation.eulerAngles;
+            }
 
             Quaternion reverseRotation = Quaternion.AngleAxis(-savedRotation, Vector3.forward);
             Quaternion correctRotation = Quaternion.AngleAxis(savedRotation, Vector3.forward);
