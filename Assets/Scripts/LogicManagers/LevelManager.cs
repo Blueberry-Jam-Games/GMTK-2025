@@ -118,6 +118,7 @@ public class LevelManager : MonoBehaviour
 
     public void CloseDoor(String name)
     {
+        Debug.Log("nfidfvhjkdkfhjkdhfkjghkjfdghkjhdfkgjhjdfghkjdfhkgjhkjdfghdkfgdhfgj");
         DoorCloseStuff(name);
         doorDict[name] = (doorDict[name].door, doorDict[name].keyName, doorDict[name].buttonName, false);
     }
