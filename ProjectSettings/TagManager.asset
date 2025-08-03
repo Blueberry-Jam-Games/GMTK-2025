@@ -13,6 +13,7 @@ TagManager:
   - Head
   - Body
   - Tail
+  - Portal
   layers:
   - Default
   - TransparentFX

@@ -47,3 +47,11 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 0}
   creditsUI: {fileID: 0}
   gameManager: {fileID: 0}
+  paused: 0
+  credited: 0
+  gameManagerPrefab: {fileID: 138493293509193164, guid: efa776265dda71242ad56833e1efbd91, type: 3}
+  doorKeys: []
+  buttons: []
+  doors: []
+  keyOpensDoor: 
+  buttonOpensDoor: 
