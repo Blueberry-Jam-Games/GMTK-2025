@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Reset()
     {
-
+        manager.Restart();
     }
 
     public void Resume()

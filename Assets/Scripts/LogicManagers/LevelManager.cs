@@ -56,6 +56,11 @@ public class LevelManager : MonoBehaviour
         gameManager.MainMenuLoad();
     }
 
+    public void Restart()
+    {
+        gameManager.Restart();
+    }
+
     private void AssignMenus()
     {
         Canvas[] canvases = FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None);
