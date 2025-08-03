@@ -95,15 +95,19 @@ public class LevelManager : MonoBehaviour
     public void OpenDoor(String name)
     {
         // could have an AlwaysOpen hook to check if the door should stay open andnot fire these open/close triggers
-        if (doorDict[name].keyName != "" && doorKeyDict[doorDict[name].keyName].keyCollected) {
+        if (doorDict[name].keyName != "" && doorKeyDict[doorDict[name].keyName].keyCollected)
+        {
             doorDict[name] = (doorDict[name].door, doorDict[name].keyName, doorDict[name].buttonName, true);
             doorDict[name].door.SetActive(false);
-        } else if (doorDict[name].keyName == "") {
+        }
+        else if (doorDict[name].keyName == "")
+        {
             doorDict[name].door.SetActive(false);
         }
     }
 
-    public void CloseDoor(String name) {
+    public void CloseDoor(String name)
+    {
         Debug.Log("hfihesyiufhyusdhfuihsdiufhisdhfisdhifuhsduifhisudhdfuisdhf");
         doorDict[name] = (doorDict[name].door, doorDict[name].keyName, doorDict[name].buttonName, false);
         doorDict[name].door.SetActive(true);
@@ -111,7 +115,8 @@ public class LevelManager : MonoBehaviour
 
     public void UnlockDoor(String name)
     {
-        if (doorKeyDict[doorDict[name].keyName].keyCollected) {
+        if (doorKeyDict[doorDict[name].keyName].keyCollected)
+        {
             OpenDoor(name);
         }
     }
@@ -164,4 +169,5 @@ public class LevelManager : MonoBehaviour
         credited = !credited;
         creditsUI.SetActive(credited);
     }
+
 }

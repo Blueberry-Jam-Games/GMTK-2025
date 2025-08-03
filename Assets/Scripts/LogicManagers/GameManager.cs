@@ -44,7 +44,8 @@ public class GameManager : SingletonGameObject<GameManager>
 
     public void FinishedTransition()
     {
-        timeline = FindAnyObjectByType<TimelinePlayer>();
+        
+        timeline = GameObject.FindWithTag("StartCamera").GetComponent<TimelinePlayer>();
         timeline.PlayTimeline();
 
     }
