@@ -2388,8 +2388,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1838766564}
     - target: {fileID: 5061015946815574006, guid: efa776265dda71242ad56833e1efbd91, type: 3}
+      propertyPath: allLevels.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061015946815574006, guid: efa776265dda71242ad56833e1efbd91, type: 3}
       propertyPath: 'allLevels.Array.data[1]'
       value: GameLevel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061015946815574006, guid: efa776265dda71242ad56833e1efbd91, type: 3}
+      propertyPath: 'allLevels.Array.data[2]'
+      value: GameLevel2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061015946815574006, guid: efa776265dda71242ad56833e1efbd91, type: 3}
+      propertyPath: 'allLevels.Array.data[3]'
+      value: GameLevel3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061015946815574006, guid: efa776265dda71242ad56833e1efbd91, type: 3}
+      propertyPath: 'allLevels.Array.data[4]'
+      value: GameLevel4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061015946815574006, guid: efa776265dda71242ad56833e1efbd91, type: 3}
+      propertyPath: 'allLevels.Array.data[5]'
+      value: GameLevel5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061015946815574006, guid: efa776265dda71242ad56833e1efbd91, type: 3}
+      propertyPath: 'allLevels.Array.data[6]'
+      value: Thank You
       objectReference: {fileID: 0}
     - target: {fileID: 6370529320691490412, guid: efa776265dda71242ad56833e1efbd91, type: 3}
       propertyPath: m_LocalPosition.x
