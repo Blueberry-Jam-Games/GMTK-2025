@@ -99,22 +99,22 @@ public class LevelManager : MonoBehaviour
     public void OpenDoor(String name)
     {
         // could have an AlwaysOpen hook to check if the door should stay open andnot fire these open/close triggers
+        Debug.Log(doorDict[name]);
         if (doorDict[name].keyName != "" && doorKeyDict[doorDict[name].keyName].keyCollected)
         {
+            DoorOpenStuff(name, true);
             doorDict[name] = (doorDict[name].door, doorDict[name].keyName, doorDict[name].buttonName, true);
-            doorDict[name].door.SetActive(false);
         }
         else if (doorDict[name].keyName == "" && buttonDict[doorDict[name].buttonName].buttonPressed)
         {
-            doorDict[name].door.SetActive(false);
+            DoorOpenStuff(name, false);
         }
     }
 
     public void CloseDoor(String name)
     {
-        Debug.Log("hfihesyiufhyusdhfuihsdiufhisdhfisdhifuhsduifhisudhdfuisdhf");
+        DoorCloseStuff(name);
         doorDict[name] = (doorDict[name].door, doorDict[name].keyName, doorDict[name].buttonName, false);
-        doorDict[name].door.SetActive(true);
     }
 
     public void UnlockDoor(String name)
@@ -123,6 +123,38 @@ public class LevelManager : MonoBehaviour
         {
             OpenDoor(name);
         }
+    }
+
+    private void DoorOpenStuff(String name, bool isKeyDoor)
+    {
+        if (!doorDict[name].doorOpen) {
+            GameObject left = doorDict[name].door.transform.Find("door_left").gameObject;
+            GameObject right = doorDict[name].door.transform.Find("door_right").gameObject;
+            if (isKeyDoor)
+            {
+                GameObject wood = doorDict[name].door.transform.Find("keyDoor").gameObject;
+                GameObject warlock = doorDict[name].door.transform.Find("keyDoor_lock").gameObject;
+                // lock disappears\
+                wood.SetActive(false);
+                warlock.SetActive(false);
+            }
+            // doors swing open
+            Vector4 posL = left.GetComponent<TorusTransform>().GetPosition();
+            left.GetComponent<TorusTransform>().SetPosition(new Vector4(posL.x,posL.y,posL.z,posL.w-90));
+            Vector4 posR = right.GetComponent<TorusTransform>().GetPosition();
+            right.GetComponent<TorusTransform>().SetPosition(new Vector4(posR.x,posR.y,posR.z,posR.w+90));
+        }
+    }
+
+    private void DoorCloseStuff(String name)
+    {
+        GameObject left = doorDict[name].door.transform.Find("door_left").gameObject;
+        Vector4 posL = left.GetComponent<TorusTransform>().GetPosition();
+        left.GetComponent<TorusTransform>().SetPosition(new Vector4(posL.x,posL.y,posL.z,posL.w+90));
+        GameObject right = doorDict[name].door.transform.Find("door_right").gameObject;
+        Vector4 posR = right.GetComponent<TorusTransform>().GetPosition();
+        right.GetComponent<TorusTransform>().SetPosition(new Vector4(posR.x,posR.y,posR.z,posR.w-90));
+        // only for button doors so just swing shut
     }
 
     private void AssignKeyDoorButton()

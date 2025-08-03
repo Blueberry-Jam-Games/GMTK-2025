@@ -165,9 +165,9 @@ public class SnakeHead : MonoBehaviour
             {
                 levelManager.CollectKey(item.gameObject.name);
             }
-            else if (item.gameObject.tag == "Door")
+            else if (item.gameObject.tag == "Door" || item.gameObject.tag == "DoorLeft" || item.gameObject.tag == "DoorRight")
             {
-                levelManager.OpenDoor(item.gameObject.name);
+                levelManager.OpenDoor(item.gameObject.transform.parent.gameObject.name);
             }
             else if (item.gameObject.tag == "Button")
             {
