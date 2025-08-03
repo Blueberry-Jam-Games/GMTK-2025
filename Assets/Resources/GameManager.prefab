@@ -125,8 +125,11 @@ MonoBehaviour:
   level: 0
   allLevels:
   - MainMenu
+  - ZeroLevel
   - OneLevel
   - TwoLevel
+  - ThreeLevel
+  - FourLevel
   - ThankYou
   transitioner: {fileID: 1598071592431891951}
 --- !u!114 &1598071592431891951
