@@ -1,3 +1,4 @@
+using BJ;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour
