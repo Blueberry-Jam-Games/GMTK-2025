@@ -13,7 +13,7 @@ TagManager:
   - Head
   - Body
   - Tail
-  - Portal
+  - StartCamera
   layers:
   - Default
   - TransparentFX
