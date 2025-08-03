@@ -3,7 +3,17 @@ guid: 380ce86e5c1762d4299496c8e91fec5b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.018
+    second: {fileID: 2100000, guid: 60d05b252824ffc42815e4d9f7433dd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: snakeGreen_MAT
+    second: {fileID: 2100000, guid: 60d05b252824ffc42815e4d9f7433dd1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

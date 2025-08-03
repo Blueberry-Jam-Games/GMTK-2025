@@ -27,6 +27,8 @@ public class TorusTransform : MonoBehaviour
 
     bool moved = false;
 
+    public bool overrideRadius = false;
+
     //public Vector3 offset;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,7 +49,10 @@ public class TorusTransform : MonoBehaviour
                 Vector3 rotations = domain.ConvertFromXYZ(transform.position);
                 MajorRotation = rotations.x;
                 MinorRotation = rotations.y;
-                Radius = rotations.z;
+                if (!overrideRadius)
+                {
+                    Radius = rotations.z;
+                }
 
                 transform.position = domain.ConvertToXYZ(MajorRotation, MinorRotation, Radius);
 
